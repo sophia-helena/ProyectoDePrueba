@@ -1,0 +1,790 @@
+/* factor per convertir de px a em que he fet servir: 12.91 */
+/* ################################################
+####### Fulla d'estils - Hoja de estilos v.02 ##########
+#######        @Socrathos.com           ##########
+####### respecte la versió 1, he passat de px a em per buscar l'accessibilitat ####
+################################################### */
+
+/* ##### Estil base ######################################################################### */
+body {
+	color: #000000;
+	background-color: #ffffff; /* rgb(248,251,217); */
+	font-family: arial, helvetica, verdana , sans-serif;
+	font-size: 0.8em;
+	width:79em;	/* no fico 1024 perquè hi ha la barra de desplaçament */
+	margin: 0 auto; /* centrar la pàgina a la pantalla */
+	padding: 0;
+	border: 1px solid #bbbbbb;
+}
+
+/*p {
+	margin: 1em 0 1.5em 0;
+	padding: 0;
+	color: #51410B;
+}*/
+
+img{
+	border: 0px;
+}
+
+
+/* ##### form, basat en capa ########################################################################################################### */
+/* http://jeffhowden.com/code/css/forms/ */
+form {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  min-width: 38.73em;
+  max-width: 50.02em;
+  width: 50em; /* amplada del formulari 40 em */
+}
+
+form fieldset {
+  font-size: 100%;
+  border:0px;
+  padding: 0.77em;
+  margin: 0 0 0 120px;
+}
+
+form fieldset.sense_linia { /* per als formularis en què hi ha un tabulador, no cal la línia (el tabulador ja en té una) */
+  border-style: none;
+}
+
+
+label {
+  font-size: 100%;
+  margin-right:2em;
+
+}
+
+input, select, textarea {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 100%;
+  color: #000000;
+}
+
+input[disabled], select[disabled] { color: #000; }
+
+textarea {
+  overflow: auto;
+}
+
+form div {
+  clear: none;
+  display: block;
+  margin: 1em 1em 1em 1em; 
+}
+
+form div label {
+  display: block;
+  float: left; 
+  clear:both;
+  width: 60px; /* determina l'amplada del label. Es pot personalitzar amb les classes wXXX */
+  padding: 0.23em 0.39em;
+  text-align: right;
+}
+
+form div input.inputSubmit {
+  background-color:#FFFFFF;
+  border-radius:4px;
+  box-shadow:0 5px 0 #60375e;
+  color:grey; font-weight:bold; line-height:100%; padding:10px; text-align:center;text-decoration:none;
+}
+
+.w300{
+  width: 23.24em; /*300px (amb relació 12.91) */
+} 
+
+.w240{
+  width: 18.59em; /*240px (amb relació 12.91) */
+} 
+
+.w180{
+  width: 13.94em; /*180px (amb relació 12.91) */
+} 
+
+.w150{
+  width: 11.61em; /*150px (amb relació 12.91) */
+}
+
+.w150_left{
+  width: 11.61em; /*150px (amb relació 12.91) */
+  text-align: left;
+}
+
+.w120{
+  width: 9.29em; /*120px (amb relació 12.91) */
+} 
+
+.w120{
+  width: 9.29em; /*120px (amb relació 12.91) */
+} 
+
+.w100{
+  width: 7.74em; /*100px;*/
+} 
+
+.w80{
+  width: 6.2em; /*80px;*/
+} 
+
+.w75{
+  width: 5.81em; /*75px;*/
+} 
+
+.w70{
+  width: 5.42em; /*70px;*/
+} 
+
+.w40{
+  width: 3.10em; /*40px;*/
+} 
+
+.w30{
+  width: 2.32em; /*30px;*/
+} 
+
+.w25{
+  width: 1.94em; /*25px;*/
+} 
+
+.w15{
+  width: 1.62em; /*15px;*/
+}
+
+.comissio{
+  width: 1.62em; /*15px;*/
+  text-align:right;
+}
+
+.comissio2{
+  width: 2.32em; /*30px;*/
+  text-align:right;
+}
+
+.preu{
+  width: 4.00em;
+  text-align:right;
+}
+
+form div.optional label{
+  font-weight: normal;
+}
+
+form div.required label {
+  font-weight: bold;
+}
+
+form div input, form div select, form div textarea {
+  width: 15.5em;
+  padding: 1px 0.23em;
+  margin: 0 0 0 0;
+}
+
+form div textarea {
+  height: 3.87em;
+}
+
+form div textarea.translation {
+  width: 23.5em;
+  height: 2.8em;
+}
+
+form div input.ombrejat, select.ombrejat{
+  background-color: #eeeeee;
+  border: 1px solid #A7AA7F;
+}
+
+form div input.ombrejat2{ /* és el ID */
+  background-color: #dddddd;
+  border: 1px solid #A7AA7F;
+}
+
+form div input.ID{ /* és el ID, amb el mateix ombrejat que ombrejat2 */
+  background-color: #dddddd;
+  border: 1px solid #A7AA7F;
+  width: 1.94em; /*25px;*/
+}
+
+form div input.data{
+  width: 5.03em;
+}
+
+form div input.data_ombrejat {
+  background-color: #eeeeee;
+  border: 1px solid #A7AA7F;
+  width: 5.03em;
+}
+
+
+form div.fons1{
+background-color: #F6F9CF;
+}
+
+/* #### assentament #### */
+
+form.asset {
+  float: none; /* important, perque si no més amunt form div float:left, i es veu diferent en IE i (mozilla, opera) */
+  width: 48.8em;  /* amplada total del formulari, label + input */
+  margin: 0 0 0 0;
+  padding: 1px 0.23em;
+}
+
+
+
+/* ##### Taula1 ### */
+table.taula1 {
+	background-color: #E7EAC2;
+}
+
+table.taula1 th {
+	border-width: 1px;
+	padding: 1px;
+	border-style: inset;
+	border-color: gray;
+	background-color: #FFFFFF;
+}
+
+table.taula1 tr.tr1 {
+	padding: 1px;
+	background-color: #C0C0A0;
+	color: #6A6B5F;
+	font-weight: bold;
+}
+
+table.taula1 tr.tr2 {
+	padding: 1px;
+	background-color: #D5D8B5;
+}
+
+table.taula1 tr.tr3 {
+	padding: 1px;
+	background-color: #E7EAC2;
+}
+
+table.taula1 tr.tr4 {
+	padding: 1px;
+	background-color: #C0C0A0;
+	color: #6A6B5F;
+	font-weight: bold;
+	font-size:80%;
+}
+
+table.taula1 tr.tr5 {
+	padding: 1px;
+	background-color: #D5D8B5;
+	font-size:80%;
+}
+
+table.taula1 tr.tr6 {
+	padding: 1px;
+	background-color: #E7EAC2;
+	font-size:80%;
+}
+
+table.taula1 td {
+  padding: 0px 0.39em 0px 0.39em;
+}
+
+table.taula1 td.tr3 {
+	padding: 1px;
+	background-color: #C0C0A0; 
+	color: #6A6B5F;
+	font-weight: bold;
+}
+
+table.taula1 td.tr4 {
+	padding: 1px;
+	background-color: #D5D8B5;
+}
+
+table.taula1 td.tr5 {
+	padding: 0.15em;
+	background-color: #C0C0A0;
+	color: #6A6B5F;
+	font-weight: bold;
+}
+
+table.taula1 td.tr6 {
+	padding: 0.15em;
+	background-color: #D5D8B5;
+}
+
+table.taula1 td.tr7 {
+	padding: 0.15em;
+	background-color: #D5D8B5;
+	width:6.2em;
+	text-align:right;
+}
+
+table.taula1 td.tr8 {
+	padding: 0.15em;
+	background-color: #E7EAC2;
+	width:7.75em;
+}
+
+table.taula1 td.tr9 {
+	text-align:right;
+	width:5.8em;
+}
+
+table.taula1 td.tr10 {
+	text-align:right;
+}
+
+
+/* ##### Capçalera ################################################################################## */
+
+#header {
+  color: inherit;
+  background-color: #60375e;
+  background-image: url(./img/capcalera.gif);
+  background-repeat: no-repeat;
+  height:9.5em; /* determina l'altura de la capçalera, però compte que hi ha una imatge de fons. La subcapçaera ha de quedar al marge inferior i no sobrepassar-ho*/
+  position: relative; /* per tal que pugui posicionar els fills de forma absoluta, el posicionament del pare ha de ser absolut o relatiu */
+  z-index:1;
+}
+
+#logo{ 
+visibility:hidden; 
+display: none; 
+} 
+
+
+.header_1 a{
+	position:absolute;
+	left:150px;
+	top:0.1em;
+	font-size: 3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #d5cbd0;
+}
+
+.header_2 a{
+	position:absolute;
+	left:150px;
+	top:2.5em;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.capa_a_capcalera{
+	position:absolute;
+	left:62em;
+	top:3em;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#resultat_titol{
+	position:absolute;
+	left:75em;
+	top:5em;
+	text-decoration: none;
+	visibility:hidden;
+	display: none;
+	color: #666666;
+	z-index:1;
+	font-weight: bold;
+}
+
+#resultat_descripcio{
+	position:absolute;
+	left:75em;
+	top:7em;
+	text-decoration: none;
+	visibility:hidden;
+	display: none;
+	padding:5px;
+	border: 1px solid #666666;
+	background-color: #ffffe1;
+	color: #666666;
+	font-size: 100%;
+	z-index:1; 
+}
+
+
+.subheader {
+	
+	color: #222222;
+	background-color: #DBDDC7;
+	position:relative;
+	top:7.2em; /* posició de la subcapçalera, que no ha de sobrepassar la capçalera */
+	font-size: 110%;
+	text-align: left;
+	padding: 0 0 1px 0; /* top right bottom left */
+	border-top-width: 1px;
+	border-top-color: #ffffff;
+	border-top-style: outset;
+	border-bottom-width: 1px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: inset;
+}
+
+.subheader a {
+	color: #444444;
+	text-decoration: none;
+}
+5
+.subheader a.login2 {
+	position:absolute;
+	left:0.75em;
+	background-color: transparent;
+	text-decoration: none;
+	padding-bottom: 0.15em;
+	padding-top: 0.1em;
+	padding-left:0.15em;
+	padding-right:0px;
+}
+
+.subheader .barra {
+	position:absolute;
+	left:11em;
+	top:0.1em;
+	color:black;
+}
+
+.subheader a.login {
+	position:absolute;
+	left:67em;
+	background-color: transparent;
+	text-decoration: none;
+	padding-bottom: 0.15em;
+	padding-top: 0.1em;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+/*.subheader a.impressora {
+	position:absolute;
+	left:64em;
+	background-color: transparent;
+	text-decoration: none;
+	padding-bottom: 0.15em;
+	padding-top: 0.1em;
+	padding-left:0px;
+	padding-right:0px;
+}*/
+
+.subheader a:hover {
+  color: #A5A5A5;
+}
+
+
+/* ##### Barra Esquerra ########################################################################## */
+ #barra_esquerra { /* les mides horitzontals han de ser amb pixels, no han de créixer quan creixi el tamany de la lletra, doncs em limita l'amplada global de 1020.31em */
+  width: 10.3em;
+  float: left;
+  clear: left;
+  padding: 1em 0.23em 0.5em 0.39em;  /* top right bottom left */
+}
+
+#menu_esquerra a {
+	color: #728692;
+	background-color: transparent;
+	text-decoration: none;
+	display: block;
+	padding-top: 0.2em;
+	padding-right: 0;
+	padding-bottom: 0.2em;
+	padding-left: 0.39em;
+	margin: 0;
+ 	
+}
+
+#menu_esquerra a:hover {
+	color: #2F3F5E;
+	background-color: #60375e;
+	text-decoration: none;
+	border-right-width: 0.23em;
+	border-right-color: #CC9966;
+	display: block;
+	border-right-style: outset;
+}
+
+/* ##### Barra esquerra, menú desplegable #################################################################*/
+
+	#nav{ /* all lists */
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		float : left;
+		width : 10.3em;
+	}
+	
+	#nav li { /* all list items */
+		position : relative;
+		float : left;
+		line-height : 1.55em;
+		width: 10.3em;
+		z-index:2;  /* important per tal de què el submenú estigui per sobre de la zona principal, però només per a IE */
+	}
+
+	#nav ul{ /* all lists */
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		float : left;
+		width : 10.3em;
+		background-color: #F8FBD9;
+	}
+
+	#nav li ul { /* second-level lists */
+		position : absolute;
+		left: -999em;
+		margin-left : 10.3em;
+		margin-top : -2.01em;
+	}
+	
+	#nav li a {
+		width: 9.68em;
+		display : block;
+	}
+	
+	#nav li a:hover {
+		color : #FFFFFF;
+		background-color : #60375e;
+	}
+	
+	#nav li:hover ul { /* lists nested under hovered list items */ 
+		display: block; /* això no seria necessari si no fos per l'IE7 */
+		left: auto;
+	}
+	
+
+	#nav li ul li ul{ /* second-level lists */
+		position : absolute;
+		left: -999em;
+		margin-left : 10.3em;
+		margin-top : -2.01em;
+		background-color: #F8FBD9;
+	}
+
+	#nav li:hover ul li ul{ /* lists nested under hovered list items */
+		position : absolute;
+		left: -999em;
+		margin-left : 10.3em;
+		margin-top : -2.01em;
+		background-color: #F8FBD9;
+	}
+
+	#nav li ul li:hover ul { /* lists nested under hovered list items */
+		left: auto;
+	}
+
+	#nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+		left: -999em;
+	}
+	
+
+	#nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul { /* lists nested under hovered list items */
+		left: auto;
+	}
+		
+/* ------------------------------- */
+
+	#llista{ /* all lists */
+		list-style: square;
+	}
+
+/* ##### Barra dreta ############################################################################## */
+
+
+ #barra_dreta { /* les mides horitzontals han de ser amb pixels, no han de créixer quan creixi el tamany de la lletra, doncs em limita l'amplada global de 1020.31em */
+  width: 15.49em;
+  float: right;
+  clear: right;
+  padding:0;
+}
+
+ #barra_dreta img{
+ width:15.49em;
+ height:500px;
+ }
+
+ 
+/* ##### Zona principal ######################################################################################### */
+
+#zona_ppal{
+	position:relative;
+	top:0px;
+	left:0px;
+	color: #000000;
+	text-align: left;
+	margin: 0 0 0 10.84em; 
+	padding: 0.77em 0.39em 1.55em 0.39em;  /* top right bottom left */
+	border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+	width:51.5em;
+	z-index: 0; /* he canviat de 1 a 0 el valor quan introdueixo les capes resultat_titol i resultat_detall */
+	background-color:#fbc3e0;
+	min-height:30em; /* canviar a mida que modifiqui el menú esquerre */
+}
+
+#zona_ppal h1 {
+	color: #A7AA7F;
+	background-color: transparent;
+	font-family: Arial, Verdana, Helvetica, Sans-serif;
+	font-size: 175%;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	margin: 0 1em 0 0;
+	padding: 0 1em 0 0;
+}
+
+#zona_ppal h2 {
+	color: #797B62;
+	background-color: transparent;
+	font-family: Arial, Verdana, Helvetica, Sans-serif;
+	font-size: 125%;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	margin: 0 1em 0 0;
+	padding: 0 1em 0 0;
+}
+
+#zona_ppal h2 a {
+	color: #797B62;
+}
+#zona_ppal h2 a:hover {
+	color: #48493A;
+}
+
+#zona_ppal h3 { /* h3 és el mateix que he però sense subratllat */
+	color: #797B62;
+	background-color: transparent;
+	font-family: Arial, Verdana, Helvetica, Sans-serif;
+	font-size: 125%;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	margin: 0 1em 0 0;
+	padding: 0 1em 0 0;
+}
+
+#zona_ppal h3 a {
+	color: #797B62;
+}
+#zona_ppal h3 a:hover {
+	color: #48493A;
+}
+
+#zona_ppal a {
+  color: #666752;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#zona_ppal a:hover {
+	text-decoration: none;
+	color: #262712;
+}
+
+
+/* ##### Contingut dins de zona principal ######################################### */
+
+	#contingut1{
+		position:relative;
+		left:0em;
+		top:0em;
+	}
+	
+	#contingut2 {
+		position:relative;
+		left:0em;
+		top:0em;
+	}
+	
+	#resultats_cerca {
+		position:relative;
+		left:0em;
+		top:0.77em;
+		min-height:25em;
+		overflow-x:auto; /* funciona amb IE i Mozilla */
+		overflow-y:hidden;
+		scrollbar-base-color: #cfd2ac; /* només funciona amb IE */
+		scrollbar-arrow-color: #bdc09a;
+		scrollbar-DarkShadow-Color: #a6aa7c;
+	}
+
+	#paginacio {
+		position:relative;
+		left:1.54em;
+		top:0.77em;
+	}
+	
+	#paginacio a {
+	  text-decoration: none;
+	}
+
+	#paginacio_php {
+		position:relative;
+		padding:1em 0 1em 0;
+		font-size:80%;
+	}
+	
+	#paginacio_php a {
+	  text-decoration: none;
+	}
+	
+	#requadre_absolut1 { /* és fill de contenidor, es posiciona de manera absoluta */
+		position:absolute;
+		left:30em;
+		top:5.5em;
+		width:20em;
+		z-index:0; /*abans era -1 */
+	}
+	
+	#m2 { /* resultats de les estadístiques en els projectes */
+		padding-left:1.55em;
+	}
+	
+	hr.linia { 
+	height: 1px;
+	border: 0;
+	color: #9e9e81;
+	} 
+	
+
+/* ##### Peu ########################################################################################## */
+
+#peu {
+	position:relative;
+	color: #000000;
+	background-color: #60375e;
+	font-size: 92%;
+	line-height: 1.25em;
+	margin: 0;
+	padding: 1em 0.5em 0em 0.5em; 
+	clear: both;
+	border-top: 1px solid #bbbbbb;
+}
+
+#peu div {
+  margin: 0;
+  padding: 0 0 .5em 0;
+  	text-align: center;
+}
+
+#peu a {
+	color: #d5cbd0;
+	background-color: transparent;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#peu a:hover {
+	text-decoration: none;
+	color: #6699CC;
+}
+
+#w3c { /* és fill de contenidor, es posiciona de manera absoluta */
+	position:absolute;
+	left:0.77em;
+	top:1.55em;
+}
